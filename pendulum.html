@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Double Pendulum Simulation</title>
+        <meta charset="utf-8"></meta>
+        <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+        <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.148.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.148.0/examples/jsm/"
+            }
+        }
+        </script>
+    </head>
+    <body style="margin: 0; position: fixed; background-color: black;">
+        <input type="number" placeholder="red_speed" id="red-speed">
+        <input type="number" placeholder="blue_speed" id="blue-speed">
+        <script type="module" src="pendulum.js"></script>
+    </body>
+</html>
