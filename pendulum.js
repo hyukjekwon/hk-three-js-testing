@@ -9,9 +9,9 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 const renderer = new THREE.WebGLRenderer();
 const controls = new OrbitControls(camera, renderer.domElement);
 
-const dirLight = new THREE.DirectionalLight(0xffffff, 0.5);
+const dirLight = new THREE.DirectionalLight(0xffffff, 1);
 dirLight.position.set(1.5, 11, 2);
-const ambLight = new THREE.AmbientLight(0xffffff, 0.5);
+const ambLight = new THREE.AmbientLight(0xffffff, 0.75);
 scene.add(dirLight);
 scene.add(ambLight);
 
@@ -23,7 +23,7 @@ const pendGeo = new THREE.BoxGeometry(1, 10, 1);
 const planeGeo = new THREE.PlaneGeometry(100, 100);
 const materials = [new THREE.MeshPhongMaterial({color: 0xbf306f}),
     new THREE.MeshPhongMaterial({color: 0x2060df}),
-    new THREE.MeshBasicMaterial({color: 0x303035})];
+    new THREE.MeshPhongMaterial({color: 0x303035})];
 const newSprite = () => {
     return new THREE.Sprite(new THREE.SpriteMaterial({map: new THREE.TextureLoader().load('circle-16.png')}))
 };
@@ -59,13 +59,14 @@ document.body.appendChild(renderer.domElement);
 
 let t = 0;
 const sprites = [];
+const speeds = [5, 7];
 
 function animate() {
     requestAnimationFrame(animate);
     controls.update();
 
-    pivot1.rotation.z = 5 * t;
-    pivot2.rotation.z = 7 * t;
+    pivot1.rotation.z = speeds[0] * t;
+    pivot2.rotation.z = speeds[1] * t;
     const newspr = newSprite();
     sprite.getWorldPosition(newspr.position);
     scene.add(newspr);
@@ -80,3 +81,18 @@ function animate() {
 }
 
 animate();
+
+const redDom = document.getElementById("red-speed");
+redDom.addEventListener('input', () => {
+    speeds[0] = redDom.value;
+    while (sprites.length) {
+        scene.remove(sprites.shift());
+    }
+})
+const blueDom = document.getElementById("blue-speed");
+blueDom.addEventListener('input', () => {
+    speeds[1] = blueDom.value;
+    while (sprites.length) {
+        scene.remove(sprites.shift());
+    }
+})
