@@ -25,7 +25,7 @@ const materials = [new THREE.MeshPhongMaterial({color: 0xbf306f}),
     new THREE.MeshPhongMaterial({color: 0x2060df}),
     new THREE.MeshPhongMaterial({color: 0x303035})];
 const newSprite = () => {
-    return new THREE.Sprite(new THREE.SpriteMaterial({map: new THREE.TextureLoader().load('circle-16.png')}))
+    return new THREE.Sprite(new THREE.SpriteMaterial({map: new THREE.TextureLoader().load('https://raw.githubusercontent.com/hyukjekwon/hk-three-js-testing/main/circle-16.png')}))
 };
 const sprite = newSprite();
 
