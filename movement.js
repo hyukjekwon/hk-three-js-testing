@@ -30,7 +30,11 @@ const materials = [new THREE.MeshPhongMaterial({color: 0x202020}),
 const newSprite = () => {
     return new THREE.Sprite(new THREE.SpriteMaterial({map: new THREE.TextureLoader().load('https://raw.githubusercontent.com/hyukjekwon/hk-three-js-testing/main/circle-16.png')}))
 };
-const cubeGeo = new THREE.BoxGeometry(1, 1, 1);
+const v = (x, y, z) => new THREE.Vector3(x/2, y/2, z/2);
+const cubePoints = [v(-1, -1, 1), v(-1, 1, 1), v(1, 1, 1), v(1, -1, 1), v(-1, -1, 1),
+    v(-1, -1, -1), v(-1, 1, -1), v(1, 1, -1), v(1, -1, -1), v(1, -1, 1), v(1, -1, -1),
+    v(-1, -1, -1), v(-1, 1, -1), v(-1, 1, 1), v(1, 1, 1), v(1, 1, -1)];
+const cubeGeo = new THREE.BufferGeometry().setFromPoints(cubePoints);
 
 // meshes
 const plane = new THREE.Mesh(planeGeo, materials[0]);
