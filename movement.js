@@ -56,13 +56,29 @@ function smoothInterpolation(n) {
     })
 }
 
+function doubleCosineCurve(n) {
+    const points = [];
+    for (let t = 1/n; t <= 1; t += 1/n) {
+        let point;
+        if (t <= 0.5) {
+            point = (1 - Math.sqrt(Math.cos(Math.PI * t))) / 2;
+        } else {
+            point = 1 - ((1 - Math.sqrt(Math.cos(Math.PI * (t + 1)))) / 2);
+        }
+        points.push(point);
+    }
+    return points;
+}
+
 function interpolate(dest) {
     const movements = Math.floor(Math.random() * globals.period);
     const buf = [];
     let start = new THREE.Vector3(0, 0, 0);
-    for (const t of smoothInterpolation(movements)) {
-        start.lerp(dest, t);
-        buf.push(start.clone());
+    for (const t of doubleCosineCurve(movements)) {
+        if (t) {
+            start.lerp(dest, t);
+            buf.push(start.clone());
+        }
     }
     return buf;
 }
