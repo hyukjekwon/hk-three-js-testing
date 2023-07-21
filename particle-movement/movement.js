@@ -28,7 +28,7 @@ const planeGeo = new THREE.PlaneGeometry(100, 100);
 const materials = [new THREE.MeshPhongMaterial({color: 0x202020}),
     new THREE.MeshPhongMaterial({color: 0x502015})];
 const newSprite = () => {
-    return new THREE.Sprite(new THREE.SpriteMaterial({map: new THREE.TextureLoader().load('https://raw.githubusercontent.com/hyukjekwon/hk-three-js-testing/main/circle-16.png')}))
+    return new THREE.Sprite(new THREE.SpriteMaterial({map: new THREE.TextureLoader().load('../media/circle-16.png')}))
 };
 const v = (x, y, z) => new THREE.Vector3(x/2, y/2, z/2);
 const cubePoints = [v(-1, -1, 1), v(-1, 1, 1), v(1, 1, 1), v(1, -1, 1), v(-1, -1, 1),

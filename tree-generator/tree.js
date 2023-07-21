@@ -28,7 +28,7 @@ const planeGeo = new THREE.PlaneGeometry(100, 100);
 const materials = [new THREE.MeshPhongMaterial({color: 0x104025}),
     new THREE.MeshPhongMaterial({color: 0x502015})];
 const newSprite = () => {
-    return new THREE.Sprite(new THREE.SpriteMaterial({map: new THREE.TextureLoader().load('green-circle-emoji.png')}))
+    return new THREE.Sprite(new THREE.SpriteMaterial({map: new THREE.TextureLoader().load('../media/green-circle-emoji.png')}))
 };
 
 // meshes
