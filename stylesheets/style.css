@@ -21,14 +21,14 @@ html, body {
 }
 
 .subpage {
-    width: 100%;
+    width: 60rem;
     height: 100%;
-    background-color: white;
 }
 
 #main {
     height: 100%;
-    width: 60rem;
+    width: 100%;
+    /* width: 60rem; */
     margin: auto;
     background-color: black;
 }
@@ -57,4 +57,12 @@ html, body {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+}
+
+#home-page {
+    color: white;
+}
+
+#abtme-page {
+    color: white;
 }
