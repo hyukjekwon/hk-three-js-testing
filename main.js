@@ -3,6 +3,7 @@
 const $ = (id) => document.getElementById(id);
 const three_projects = ['joy-division/joydivision.html', 'particle-movement/movement.html',
                         'pendulum-simulation/pendulum.html', 'tree-generator/tree.html']
+let activePageID = "home-tab";
 
 function loadPage(page) {
     const main = $("main");
@@ -18,6 +19,11 @@ function initAll() {
     const navLinks = document.getElementsByClassName("main-subpage");
     for (const link of navLinks) {
         link.addEventListener("click", () => {
+            if (!link.classList.contains("active")) {
+                link.classList.add("active");
+                $(activePageID).classList.remove("active");
+                activePageID = link.id;
+            }
             loadMainPage(link.id.split("-")[0]);
         })
     }

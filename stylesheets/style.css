@@ -21,8 +21,21 @@ html, body {
 }
 
 .subpage {
-    width: 60rem;
+    width: 75%;
     height: 100%;
+    margin: auto;
+    font-family: sans-serif;
+}
+
+.pg-item {
+    border: solid;
+    border-color: black;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.zillion {
+    position: absolute;
 }
 
 #main {
@@ -61,6 +74,81 @@ html, body {
 
 #home-page {
     color: white;
+}
+
+#home-main {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+#home-welcome {
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, #87cd7c, #56a3bb);
+}
+
+#home-welcome::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: linear-gradient(45deg, #33FF57, #00C3FF);
+    transition: opacity 0.5s ease;
+}
+
+#home-welcome:hover::before {
+    opacity: 1;
+}
+
+#home-right {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#home-bio {
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, #87cd7c, #56a3bb);
+}
+
+#home-bio::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: linear-gradient(45deg, #33FF57, #00C3FF);
+    transition: opacity 0.5s ease;
+}
+
+#home-bio:hover::before {
+    opacity: 1;
+}
+
+#home-contact {
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, #87cd7c, #56a3bb);
+}
+
+#home-contact::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: linear-gradient(45deg, #33FF57, #00C3FF);
+    transition: opacity 0.5s ease;
+}
+
+#home-contact:hover::before {
+    opacity: 1;
 }
 
 #abtme-page {
