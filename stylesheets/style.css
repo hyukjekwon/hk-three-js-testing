@@ -51,12 +51,21 @@ html, body {
 
 .item-content {
     position: absolute;
-    transform: translate(20px, 50px);
+    transform: translate(5%, 70%);
     transition: all 0.5s ease;
 }
 
 .pg-item:hover .item-content {
-    transform: translate(30px, 50px);
+    transform: translate(10%, 70%);
+}
+
+.link {
+    color: white;
+    transition: color 0.25s ease;
+}
+
+.link:hover {
+    color: violet;
 }
 
 #main {
@@ -106,7 +115,7 @@ html, body {
     flex-grow: 1;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(45deg, #33FF57, #00b2e9);
+    background: linear-gradient(45deg, #33FF57, #00ace0);
 }
 
 #home-welcome::before {
@@ -115,7 +124,7 @@ html, body {
     width: 100%;
     height: 100%;
     opacity: 0;
-    background: linear-gradient(-45deg, #1adb3e, #008fbb);
+    background: linear-gradient(-45deg, #1adb3e, #0074e7);
     transition: opacity 0.5s ease;
 }
 
@@ -142,7 +151,7 @@ html, body {
     width: 100%;
     height: 100%;
     opacity: 0;
-    background: linear-gradient(-45deg, #daae1f, #de4a18);
+    background: linear-gradient(-45deg, #daae1f, #d44312);
     transition: opacity 0.5s ease;
 }
 
