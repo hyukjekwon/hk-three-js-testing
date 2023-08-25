@@ -69,6 +69,10 @@ html, body {
     color: violet;
 }
 
+ul.nav a:hover {
+    color: #a0a0a0 !important;
+}
+
 #main {
     height: 100%;
     width: 100%;
