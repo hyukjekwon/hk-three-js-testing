@@ -14,6 +14,7 @@ html, body {
 .nav-link {
     color: white;
     margin: auto;
+    font-size: 20px;
 }
 
 .nav-item {
