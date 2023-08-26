@@ -3,7 +3,6 @@
 const $ = (id) => document.getElementById(id);
 const three_projects = ['joy-division/joydivision.html', 'particle-movement/movement.html',
                         'pendulum-simulation/pendulum.html', 'tree-generator/tree.html']
-let activePageID = "home-tab";
 
 function loadPage(page) {
     const main = $("main");
@@ -20,9 +19,10 @@ function initAll() {
     for (const link of navLinks) {
         link.addEventListener("click", () => {
             if (!link.classList.contains("active")) {
+                for (const pageDOM of document.getElementsByClassName("active")) {
+                    pageDOM.classList.remove("active");
+                }
                 link.classList.add("active");
-                $(activePageID).classList.remove("active");
-                activePageID = link.id;
             }
             loadMainPage(link.id.split("-")[0]);
         })
@@ -37,6 +37,9 @@ function initAll() {
         projTag.innerText = projName;
         projTag.addEventListener("click", () => {
             loadPage(project);
+            for (const pageDOM of document.getElementsByClassName("active")) {
+                pageDOM.classList.remove("active");
+            }
         });
         projectDropDown.appendChild(projTag);
     }
