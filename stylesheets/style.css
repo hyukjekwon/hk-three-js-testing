@@ -1,3 +1,26 @@
+/* MOBILE-ONLY STYLING */
+@media only screen and (max-device-width: 1024px) {
+    .nav-item {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+    .subpage {
+        width: 100% !important;
+    }
+    .table {
+        font-size: 3vw;
+    }
+    #nav {
+        font-size: 5vw;
+        display: flex;
+    }
+    #home-main {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
 html, body {
     display: flex;
     flex-direction: column;
@@ -6,7 +29,7 @@ html, body {
     width: 100%;
     height: 100%;
 }
-
+    
 .nav-link {
     color: white;
     margin: auto;
