@@ -1,5 +1,8 @@
 /* MOBILE-ONLY STYLING */
 @media only screen and (max-device-width: 1024px) {
+    .pg-item {
+        margin: 7px !important;
+    }
     .nav-item {
         flex: 1 1 0;
         min-width: 0;
@@ -9,6 +12,10 @@
     }
     .table {
         font-size: 3vw;
+    }
+    .item-content {
+        font-size: 3vw;
+        max-width: 23ch !important;
     }
     #nav {
         font-size: 5vw;
@@ -70,12 +77,14 @@ html, body {
 
 .item-content {
     position: absolute;
-    transform: translate(5%, 70%);
+    transform: translate(3vw, 10vh);
+    word-wrap: break-word; 
+    max-width: 30ch;
     transition: all 0.5s ease;
 }
 
 .pg-item:hover .item-content {
-    transform: translate(10%, 70%);
+    transform: translate(4vw, 10vh);
 }
 
 .link {
