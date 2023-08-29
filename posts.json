@@ -1,27 +1,41 @@
 [
     {
         "title": "starting graduate school!",
-        "date": "9.6.23",
-        "content": "meow"
+        "date": "9.5.23",
+        "content": "while i definitely learned a lot during my time in undergrad, i often still feel like i'm just getting started. looking forward to learning a ton and absolutely just demolishing the next couple semesters."
     },
     {
-        "title": "dog speaks",
-        "date": "10.28.23",
-        "content": "bark"
+        "title": "website is finally complete!",
+        "date": "8.31.23",
+        "content": "after wrestling with CSS for many millennia i have finally completed this site! it always looks easy at first glance, but it eventually becomes a new form of emotional torture. flex box is my nemesis."
     },
     {
-        "title": "study",
-        "date": "10.28.23",
-        "content": "aslkdjalksdlaknsda"
+        "title": "musicological analysis using HMMs",
+        "date": "7.22.23",
+        "content": "in association with a UMass professor, i updated an old hidden markov model (HMM) from python2 to python3 and plugged it into Google Colab. its design is based on an _sl_80s paper_el_ where its used for speech prediction, but this model is adapted to analyze chords using the python library _sl_music21_el_. if you want to check it out, _sl_here's a colab link_el_ to it!",
+        "links": [
+            "https://ieeexplore.ieee.org/document/18626",
+            "http://web.mit.edu/music21/",
+            "https://colab.research.google.com/drive/1yWkqtEebtMEsqp_YbgzpuTm1WE0y_UZW"
+        ]
     },
     {
-        "title": "study",
-        "date": "10.28.23",
-        "content": "aslkdjalksdlaknsda"
+        "title": "graduated!!!",
+        "date": "5.28.23",
+        "content": "at last. i have it. my bachelor's of science in computer science. while i feel like my education is just beginning, i look back on my time as an undergrad with a sense of great pride and accomplishment. real proud of myself!!"
     },
     {
-        "title": "study",
-        "date": "10.28.23",
-        "content": "aslkdjalksdlaknsda"
+        "title": "completed web-looper project!",
+        "date": "12.11.22",
+        "content": "team µ has completed our project for the CS 326 final, web-looper! in short, it's a very basic in-browser digital audio workstation, as well as a forum where users can post and share their own projects! i mostly contributed to the interface/design of the looper itself, as well as the front-end internals of the Tone.js library. here's the _sl_repo_el_, and here's the _sl_link_el_!",
+        "links": [
+            "https://github.com/hyukjekwon/cs326-final-mu",
+            "http://web-looper.herokuapp.com/looper"
+        ]
+    },
+    {
+        "title": "started undergrad at umass!",
+        "date": "9.1.19",
+        "content": "i'm writing this retroactively just to add more posts so you can scroll down some more on this side. pay no heed."
     }
 ]

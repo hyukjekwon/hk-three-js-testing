@@ -97,9 +97,9 @@ html, body {
 }
 
 .post {
-    min-height: 20%;
+    min-height: 12.5%;
     border-radius: 10px;
-    background-color: #00000020;
+    background-color: #00000030;
     margin: 20px;
     position: relative;
     transition: all 0.5s ease;
@@ -114,13 +114,14 @@ html, body {
 }
 
 .post:hover {
-    border-width: 20px;
+    border-width: 10px;
     background-color: #00000040;
 }
 
 .post-header {
     display: flex;
     flex-direction: row;
+    border-bottom: solid;
 }
 
 .post-title {
@@ -134,8 +135,16 @@ html, body {
 }
 
 .post-content {
-    border-top: solid;
     padding-top: 10px;
+}
+
+a {
+    color: white;
+    transition: color 0.5s ease;
+}
+
+.post:hover a {
+    color: #80ffb0;
 }
 
 ul.nav a:hover {
@@ -186,6 +195,7 @@ ul.nav a:hover {
 }
 
 #home-welcome {
+    max-width: 50%;
     flex-grow: 1;
     position: relative;
     background: linear-gradient(45deg, #33FF57, #00ace0);
