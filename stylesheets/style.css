@@ -128,12 +128,6 @@ html, body {
     flex-grow: 1;
 }
 
-.post-date {
-    /* border: solid;
-    border-radius: 10px;
-    padding: 5px; */
-}
-
 .post-content {
     padding-top: 10px;
 }
