@@ -114,7 +114,7 @@ html, body {
 }
 
 .post:hover {
-    border-width: 10px;
+    border-width: 0px 10px;
     background-color: #00000040;
 }
 
