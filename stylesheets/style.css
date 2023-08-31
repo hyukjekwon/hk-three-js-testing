@@ -83,7 +83,8 @@ a {
 }
 
 .item-content {
-    transform: translate(10%, 10%);
+    transform: translate(10%, 0%);
+    text-align: center;
     word-wrap: break-word;
     max-width: 80%;
     transition: all 0.5s ease;
@@ -91,7 +92,7 @@ a {
 
 .pg-item:hover .item-content {
     max-width: 70%;
-    transform: translate(20%, 10%);
+    transform: translate(20%, 0%);
 }
 
 .link {
@@ -264,6 +265,7 @@ ul.nav a:hover {
     position: relative;
     overflow: hidden;
     background: linear-gradient(45deg, #f7cb3d, #f2693b);
+    max-height: 70%;
 }
 
 #home-bio::before {
@@ -303,4 +305,19 @@ ul.nav a:hover {
 
 #gallery-page {
     width: 100%;
+}
+
+#projects-page {
+    width: 100%;
+    background: linear-gradient(0deg, #222, #222);
+    color: white;
+}
+
+#portrait {
+    max-width: 100%;
+    max-height: 30vh;
+    /* border: solid; */
+    border-radius: 30px;
+    background-color: #fff8;
+    /* border-color: black; */
 }
